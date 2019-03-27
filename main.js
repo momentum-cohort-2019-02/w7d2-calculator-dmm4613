@@ -200,7 +200,24 @@ function showDisplay(input) {
 }
 
 function evaluate(display){
-    let answer = eval(display)
+    let answer
+    if (display === '321'){
+        answer = 'BOOM!'
+        console.log(answer)
+        document.querySelector('#display').innerText = `${answer}`
+        display = ''
+        input = ''
+        return display, input
+    }
+    else if (display === '867-5309'){
+        answer = 'JENNY!'
+        console.log(answer)
+        document.querySelector('#display').innerText = `${answer}`
+        display = ''
+        input = ''
+        return display, input
+    }
+    answer = eval(display)
     document.querySelector('#display').innerText = `${answer}`
     console.log(answer)
     display = ''

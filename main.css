@@ -2,6 +2,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     margin-top: 3rem; 
     margin-left: calc(50% - 200px);
+    background-color: silver
 }   
 
 
@@ -13,11 +14,15 @@ body{
     text-align: center;
     padding-top: 25px; 
     cursor: pointer;
-    font-size: 32px;
+    font-size: 50px;
     border: 1px solid black;
 }
 
-button {
+calc-btn {
+    padding: 1.5rem;
+}
+
+/* button {
     background-color: lightblue;
     color: black;
     width: 97px;
@@ -27,7 +32,7 @@ button {
     cursor: pointer;
     font-size: 32px;
     border: 1px solid black;
-}
+} */
 
 .operand{
     background-color: lightsalmon;
@@ -62,7 +67,7 @@ button {
 #display{
     height: 100px;
     color: white;
-    text-align: right;
+    text-align: end;
     border-left: 1px solid black;
     border-top: 1px solid black;
     border-right: 1px solid black;
