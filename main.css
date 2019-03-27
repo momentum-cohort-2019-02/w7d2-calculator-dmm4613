@@ -1,73 +1,77 @@
-.calculator{
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    border: solid .5px gray;
-    max-width: 300px;
-    width: auto;
-    min-width: 200px;
-    height: auto;
-}
-
-/* 
- */
-button {
+body{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    min-width: 200px;
-    min-height: 200px;
-    width: 75px;
-    height: 75px;
+    margin-top: 3rem; 
+    margin-left: calc(50% - 200px);
+}   
+
+
+.calc-btn {
+    background-color: lightblue;
+    color: black;
+    width: 97px;
+    height: 70px;
+    text-align: center;
+    padding-top: 25px; 
+    cursor: pointer;
+    font-size: 32px;
+    border: 1px solid black;
 }
 
-button:hover {
-    color: red;
-}
-#clear {
-    margin: 0;
-    width: auto;
-    height: auto;
-}
-#display {
-    font-size: 30px;
-    margin: 0;
-    padding: .5rem;
-    max-width: auto;
-    width: 100%;
-    max-height: 100%;
-    height: auto;
-    animation: pulse 5s infinite;
+button {
+    background-color: lightblue;
+    color: black;
+    width: 97px;
+    height: 70px;
+    text-align: center;
+    padding-top: 3px; 
+    cursor: pointer;
+    font-size: 32px;
+    border: 1px solid black;
 }
 
-@keyframes pulse {
-  0% {
-    background-color: lightgray;
-  }
-  100% {
-    background-color: darkgray;
-  }
+.operand{
+    background-color: lightsalmon;
+}
+.calc-btn:hover {
+    background-color: lightcoral;
+}
+.row{
+    display: table;
+    table-layout: fixed;
+    width: 400px;
 }
 
-/* #buttons{
-    display: flex;
-    flex-wrap: wrap;
-   flex-direction: column; 
-    max-height: 300px;  
-} */
-.numbers {
-    color: red; 
+.column{
+    display: table-cell;
 }
-/*
-.operators {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    width: 24%;
-    height: 75%;
-    
+
+#button0{
+    width: 196.666667px;
+    border-radius: 0 0 0 7px;
 }
-.equals {
-    margin: 0;
-    width: 24%;
-    height: 24%;
-} */
+
+#clear{
+    width: 196.666667px;
+}
+
+#equals{
+    border-radius: 0 0 7px 0;
+}
+
+
+#display{
+    height: 100px;
+    color: white;
+    text-align: right;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    font-size: 70px;
+    font-weight: 50;
+    background-color: darkolivegreen;
+    overflow: hidden;
+    white-space: nowrap;    
+    padding: 12px;
+    border-radius: 7px 7px 0 0;   
+}
+
