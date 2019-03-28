@@ -1,4 +1,4 @@
-let input = ''
+let input = '0'
 let display = ''
 
 function makeButtons() {
@@ -128,8 +128,6 @@ function makeButtons() {
 
     equalsButton.addEventListener('click', function () {
         evaluate(display)
-        display = ''
-        input = ''
     })
     equalsDiv.appendChild(equalsButton)
 
@@ -185,16 +183,24 @@ function makeButtons() {
     clearButton.innerText = 'C'
     clearButton.addEventListener('click', function () { 
         display = ''
-        input = ''
+        input = '0'
         showDisplay(input)  
     })
-        clearDiv.appendChild(clearButton)
-       
+        clearDiv.appendChild(clearButton)      
 
 }
 
 function showDisplay(input) {
-    display = display + input
+    if (display === '0'){
+        display = input
+    }
+    else if (display === '0' && input === '.'){
+        display = '0'+input
+    }
+    else if (display.includes('.') && input === '.'){
+        return
+    }
+    else {display = display + input  }
     console.log(display)
     document.querySelector('#display').innerText = `${display}`
 }
@@ -206,7 +212,7 @@ function evaluate(display){
         console.log(answer)
         document.querySelector('#display').innerText = `${answer}`
         display = ''
-        input = ''
+        input = '0'
         return display, input
     }
     else if (display === '867-5309'){
@@ -214,14 +220,15 @@ function evaluate(display){
         console.log(answer)
         document.querySelector('#display').innerText = `${answer}`
         display = ''
-        input = ''
+        input = '0'
         return display, input
     }
     answer = eval(display)
     document.querySelector('#display').innerText = `${answer}`
     console.log(answer)
     display = ''
-    input = ''
+    console.log(display)
+    input = '0'
     return display, input
 }
 

@@ -12,14 +12,14 @@ body{
     width: 97px;
     height: 70px;
     text-align: center;
-    padding-top: 25px; 
     cursor: pointer;
     font-size: 50px;
     border: 1px solid black;
 }
 
 calc-btn {
-    padding: 1.5rem;
+    padding: 1rem;
+    display: block;
 }
 
 /* button {
